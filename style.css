@@ -1,0 +1,53 @@
+/* body {
+    
+    font-family: 'Arial', sans-serif;
+    width: 534px;
+    height: 12px;
+    top: 65px;
+    left: 841px;
+
+} */
+
+.navbar {
+    background-color:transparent; 
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    
+}
+header {
+    position: fixed;
+    z-index: 9;
+}
+.nav-item {
+    color: #FFF;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.nav-item:last-child {
+    margin-right: 0; 
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+#carouselExampleControls {
+    height: 100vh; 
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
