@@ -75,8 +75,16 @@ div.head {
 }
 div.input-group.mb-3{
     width:430px;
-
+    
 }
+
+.input-group{
+    .search-bar{
+        background-color: transparent;
+        border-radius: 18px;
+    }
+}
+
 
 div.hhead {
     margin-left: 200px;
