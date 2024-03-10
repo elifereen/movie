@@ -26,12 +26,50 @@
     margin-left: 1000px;
     margin-top: 30px;
 }
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
 
+.navbar li {
+    margin-right: 10px; 
+    position: relative;
+}
+
+.navbar li:hover ul {
+    display: block;
+}
+
+.navbar ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(218, 207, 207);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    border-radius: 2px;
+    width: 100px;
+    text-align: center;
+}
+
+.navbar ul ul li {
+    width: 100%;
+    text-align: left;
+}
 
 header {
     position: fixed;
     z-index: 9;
+    transition: background-color 0.3s ease;
+    background-color: transparent; /* Initial background color */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
+
 
 .nav-item {
     color: #FFF;
@@ -41,7 +79,7 @@ header {
 
 .nav-item:hover {
     text-decoration: underline;
-}
+} 
 
 #carouselExampleControls {
     height: 100vh;
@@ -106,7 +144,7 @@ div.paragraph{
     margin-bottom: 220px;
     margin-top: -140px;
     width: 550px;
-    color: #979494;
+    color: #e4dfdf;
     text-align:left;
 }
 button.btn.btn-danger{
@@ -120,54 +158,142 @@ body {
     background-color: #000005eb !important;
 }
 
-div.card {
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+main{
+    width :100%;
+}
+
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.cards-design {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.card-img-right {
+    order: 1; /* İmages'ı sağa almak için sıralamayı değiştirin */
+}
+
+.cards-design img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+.card {
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+div.card{
+    background-color: #161616 ;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 13px;
+}
+
+.card-content {
+    display: none;
+    position: absolute;
     background-color: #141414eb;
     border-radius: 13px;
+    padding: 10px;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
 }
 
-img.card-img {
-    border-radius: 13px;
+.card:hover .card-content {
+    display: block;
 }
-
 
 h5.card-title {
     text-align: center;
     color: #ada8a8;
 }
-
 img.card-img-right {
-    width: 1020px;
-    height: 620px;
+    width: 720px;
+    height: 420px;
     border-radius: 12px;
+    margin-right:auto;
+}
+div.card-content{
+    margin-left: 740px;
+}
+
+.cards:hover .card-design {
+    display: block;
+}
+
+.cards-design {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.cards-design img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card-img-right {
+    align-self: flex-start; /* Resimleri üste hizala */
 }
 
 img.card-img-top {
     margin-top: 10px;
     margin-right: 2px;
-    width: 335px;
-    height: 200px;
+    width: 320px;
+    height: 160px;
     border-radius: 12px;
 }
 
 img.card-img-mid {
     margin-top: 10px;
     margin-right: 2px;
-    width: 335px;
-    height: 200px;
+    width: 320px;
+    height: 160px;
     border-radius: 12px;
 }
 
 img.card-img-bottom {
     margin-top: 10px;
-    width: 335px;
-    height: 200px;
+    width: 320px;
+    height: 160px;
     border-radius: 12px;
 }
-main{
-    width :100%;
-}
 
-/*? footer reset */
+
+/*? footer */
 *,
 *::after,
 *::before {
@@ -184,8 +310,9 @@ body {
     min-width: 300px;
     overflow: auto;
 }
+
 div.photo{
-    margin-left: 360px;
+    margin-left: 430px;
 }
 
 /*footer*/

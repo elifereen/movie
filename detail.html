@@ -1,0 +1,6 @@
+<img src="" id="banner" alt="">
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const myParam = JSON.parse(urlParams.get('movie').slice(0, -1));
+    document.getElementById('banner').setAttribute("src", myParam.image)
+</script>

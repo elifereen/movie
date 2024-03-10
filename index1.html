@@ -132,57 +132,6 @@
     <div class="container" id="moviesContainer">
         <!-- İlk sıradaki filmler -->
 
-        <div class="card">
-            <a href="avengers.html">
-                <img src="images/avengers.png" class="card-img" alt="Avengers">
-                <h5 class="card-title">Avengers</h5>
-            </a>
-        </div>
-
-        <div class="card">
-            <a href="inception.html">
-                <img src="images/inception.png" class="card-img" alt="Inception">
-                <h5 class="card-title">Inception</h5>
-            </a>
-        </div>
-        <div class="card">
-            <a href="thedark.html">
-               <img src="images/thedark.png" class="card-img" alt="The Dark Knight">
-               <h5 class="card-title">The Dark Knight</h5>
-            </a>
-        </div>
-        <div class="card" >
-            <a href="lordoftherings.html">
-               <img src="images/lordoftherings.png" class="card-img" alt="Lord of the Rings">
-               <h5 class="card-title">Lord of the Rings</h5>
-            </a>
-        </div>
-
-        <!-- İkinci sıradaki filmler -->
-        <div class="card">
-            <a href="thewolf.html">
-               <img src="images/thewolf.png" class="card-img" alt="The Wolf of Wall Street">
-               <h5 class="card-title">The Wolf of Wall Street</h5>
-            </a>
-        </div>
-        <div class="card" >
-            <a href="topgun.html">
-               <img src="images/topgun.png" class="card-img" alt="Top Gun Maverick">
-               <h5 class="card-title">Top Gun Maverick</h5>
-            </a>
-        </div>
-        <div class="card" >
-            <a href="interstellar.html">
-               <img src="images/interstellar.png" class="card-img" alt="Interstellar">
-               <h5 class="card-title">Interstellar</h5>
-            </a>
-        </div>
-        <div class="card" >
-            <a href="pirates.html">
-               <img src="images/pirates.png" class="card-img" alt="Pirates of Caribbean">
-               <h5 class="card-title">Pirates of Caribbean</h5>
-            </a>
-        </div>
     </div><br><br><br>
     <div class="hhead">
         <div class="col">
@@ -348,7 +297,19 @@
             </div>
         </div>
     </div>
+    <script>
+        [{ title: "avengers", image: "images/avengers.png" },{ title: "The Dark Night", image: "images/thedark.png" }].forEach(data => {
+            
+            document.getElementById("moviesContainer").innerHTML += `<div class="card">
+    <a href="detail.html?movie=${new URLSearchParams(JSON.stringify(data)).toString()}">
+        <img src="${data.image}" class="card-img" alt="Avengers">
+        <h5 class="card-title">${data.title}</h5>
+    </a>
+</div>
+`;
+        })
 
+    </script>
 
 </body>
 
